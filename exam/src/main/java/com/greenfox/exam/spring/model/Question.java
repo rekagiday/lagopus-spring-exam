@@ -1,19 +1,27 @@
 package com.greenfox.exam.spring.model;
 
-import java.util.List;
+import com.greenfox.exam.spring.repository.QuizRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by User on 2017. 06. 06..
  */
 public class Question {
 
-  String questionText;
+  @Autowired
+  QuizRepository quizRepository;
 
-  public Question(String questionText) {
-    this.questionText = questionText;
-  }
+
+  private long id;
+
+  private String questionText;
 
   public Question() {
+  }
+
+  public Question(long id, String questionText) {
+    this.id = quizRepository.findOne(id).getId();
+    this.questionText = questionText;
   }
 
   public String getQuestionText() {
