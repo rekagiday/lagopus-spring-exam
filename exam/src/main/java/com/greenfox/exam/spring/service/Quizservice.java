@@ -1,12 +1,14 @@
 package com.greenfox.exam.spring.service;
 
 import com.greenfox.exam.spring.model.Answer;
+import com.greenfox.exam.spring.model.Project;
 import com.greenfox.exam.spring.model.Question;
 import com.greenfox.exam.spring.model.Response;
 import com.greenfox.exam.spring.repository.QuizRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Service
 public class QuizService {
@@ -40,13 +42,11 @@ public class QuizService {
   }
 
 
-  public Response checkAnswers(List) {
-    if (answers[i])
-
-
+  public Response checkAnswers(Answer[] answers) {
+    int counter = 1;
+    while (answers[counter].toString().equals(quizRepository.findOne(randomIDs[counter]).getAnswer())) {
+      return new Response(Project);
     }
-    return answers;
+    return new Response();
   }
-
-
 }

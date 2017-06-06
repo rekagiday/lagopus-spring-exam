@@ -27,9 +27,8 @@ public class QuizRestController {
   }
 
   @PostMapping(value = "/answers")
-  public Response response(@RequestBody List<Answer> answers) {
-    quizService.checkAnswers(answers);
-    return ;
+  public Response response(@RequestBody Answer[] answers) {
+    return quizService.checkAnswers(answers);
   }
 
 }

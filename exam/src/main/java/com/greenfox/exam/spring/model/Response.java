@@ -1,8 +1,10 @@
 package com.greenfox.exam.spring.model;
 
-/**
- * Created by User on 2017. 06. 06..
- */
+import java.util.List;
+
+
 public class Response {
+
+  List<Project> projectList;
 
 }
