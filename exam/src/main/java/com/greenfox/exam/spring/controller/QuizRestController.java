@@ -18,8 +18,7 @@ public class QuizRestController {
   @Autowired
   QuizRepository quizRepository;
 
-  @Autowired
-  QuizService quizService;
+  QuizService quizService = new QuizService();
 
   @GetMapping(value = "/questions")
   public List<Question> listQuestions() {
