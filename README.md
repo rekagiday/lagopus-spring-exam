@@ -104,17 +104,18 @@ Your task is to create a RESTful quiz application with full of greenfox question
 
 ### In what cases would you choose to use an abstract class over an interface?
 
-Please define it with your own words. We are expecting at least 3 distinct ideas that you write here:
+1. Abstract classes are used when we want to define a sub (child) class of its parent class, which is the abstract class. In this case we want to declare what the child will be. Eg.: Buksi is a child class which implements Dog abstract class.
+In case of interfaces, we use them if we want to make a kind of a 'promise' to use the interface's methods in the classes which extend it. Eg. our repository extends CRUDrepository to make sure we can use the crudrepository's methods later on. 
 
 
 ### Analyzing URL
 Please name the parts of the URL below.
 [<img src="assets/URLanalysis.png" alt="parts of URL" />](assets/URLanalysis.png?raw=true)
 
-1:  
-2:  
-3:  
-4:  
-5:  
-6:  
-7:  
+1:  protocol
+2:  host name / sub-domain
+3:  domain name
+4:  port number
+5:  path
+6:  parameters start from this on
+7:  query (a parameter and it's value)
